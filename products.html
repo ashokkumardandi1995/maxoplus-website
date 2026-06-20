@@ -39,88 +39,7 @@ Premium Cleaning Solutions For Every Home
 
 <section class="products">
 
-<div class="product-grid">
-
-<div class="product-card">
-
-<img src="images/ToiletCleaner.png" alt="Toilet Cleaner">
-
-<h3>Toilet Cleaner</h3>
-
-<p>
-Powerful stain removal formula that kills germs and keeps toilets fresh and hygienic.
-</p>
-
-<a href="contact.html" class="btn">
-Enquire Now
-</a>
-
-</div>
-
-<div class="product-card">
-
-<img src="images/floor-cleaner.png" alt="Floor Cleaner">
-
-<h3>Floor Cleaner</h3>
-
-<p>
-Long-lasting fragrance and superior floor cleaning for daily use.
-</p>
-
-<a href="contact.html" class="btn">
-Enquire Now
-</a>
-
-</div>
-
-<div class="product-card">
-
-<img src="images/handwash.png" alt="Hand Wash">
-
-<h3>Hand Wash</h3>
-
-<p>
-Gentle on skin while providing effective protection against germs.
-</p>
-
-<a href="contact.html" class="btn">
-Enquire Now
-</a>
-
-</div>
-
-<div class="product-card">
-
-<img src="images/dishwash.png" alt="Dish Wash Gel">
-
-<h3>Dish Wash Gel</h3>
-
-<p>
-Removes tough grease and leaves utensils sparkling clean.
-</p>
-
-<a href="contact.html" class="btn">
-Enquire Now
-</a>
-
-</div>
-
-<div class="product-card">
-
-<img src="images/bathroom-cleaner.png" alt="Bathroom Cleaner">
-
-<h3>Bathroom Cleaner</h3>
-
-<p>
-Removes tough stains and keeps bathrooms clean, fresh and shining.
-</p>
-
-<a href="contact.html" class="btn">
-Enquire Now
-</a>
-
-</div>
-
+<div class="product-grid" id="products-container">
 </div>
 
 </section>
@@ -160,6 +79,35 @@ WA
 <p>&copy; 2026 Maxo Plus. All Rights Reserved.</p>
 
 </footer>
+<script>
+fetch('products.json')
+  .then(response => response.json())
+  .then(products => {
 
+    const container =
+      document.getElementById('products-container');
+
+    products.forEach(product => {
+
+      container.innerHTML += `
+      <div class="product-card">
+
+        <img src="${product.image}" alt="${product.title}">
+
+        <h3>${product.title}</h3>
+
+        <p>${product.description}</p>
+
+        <a href="contact.html" class="btn">
+          Enquire Now
+        </a>
+
+      </div>
+      `;
+
+    });
+
+  });
+</script>
 </body>
 </html>
