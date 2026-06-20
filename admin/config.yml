@@ -21,8 +21,8 @@ collections:
         widget: "image"
 
       - label: "Description"
-        name: "body"
-        widget: "markdown"
+        name: "description"
+        widget: "text"
 
   - name: "gallery"
     label: "Gallery"
