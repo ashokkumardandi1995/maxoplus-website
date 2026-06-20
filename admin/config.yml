@@ -5,17 +5,11 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "gallery"
-    label: "Gallery"
-    folder: "images"
-    create: true
-    delete: true
-
-    fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-
-      - label: "Image"
-        name: "image"
-        widget: "image"
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "index.html"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
