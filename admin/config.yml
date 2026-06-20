@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "gallery"
+    label: "Gallery"
+    folder: "images"
+    create: true
+    delete: true
+
+    fields:
+      - label: "Image"
+        name: "image"
+        widget: "image"
