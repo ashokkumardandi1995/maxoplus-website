@@ -7,11 +7,17 @@ public_folder: "/images"
 collections:
   - name: "gallery"
     label: "Gallery"
-    folder: "images"
+
+    folder: "gallery"
+
     create: true
     delete: true
 
     fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
       - label: "Image"
         name: "image"
         widget: "image"
