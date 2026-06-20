@@ -1,7 +1,27 @@
 [
   {
+    "title": "Toilet Cleaner",
+    "image": "/images/ToiletCleaner.png",
+    "description": "Powerful stain removal formula that kills germs and keeps toilets fresh and hygienic."
+  },
+  {
     "title": "Floor Cleaner",
-    "image": "/images/uploads/floor-cleaner.png",
+    "image": "/images/floor-cleaner.png",
     "description": "Long-lasting fragrance and superior floor cleaning for daily use."
+  },
+  {
+    "title": "Hand Wash",
+    "image": "/images/handwash.png",
+    "description": "Gentle on skin while providing effective protection against germs."
+  },
+  {
+    "title": "Dish Wash Gel",
+    "image": "/images/dishwash.png",
+    "description": "Removes tough grease and leaves utensils sparkling clean."
+  },
+  {
+    "title": "Bathroom Cleaner",
+    "image": "/images/bathroom-cleaner.png",
+    "description": "Removes tough stains and keeps bathrooms clean, fresh and shining."
   }
 ]
