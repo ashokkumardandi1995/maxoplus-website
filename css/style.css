@@ -172,15 +172,10 @@ gap:30px;
 }
 
 .product-card{
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-text-align:center;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-transition:.3s;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product-card:hover{
