@@ -1,5 +1,4 @@
 name: Build Products JSON
-
 on:
   push:
     paths:
