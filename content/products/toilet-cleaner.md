@@ -1,5 +1,5 @@
 ---
-title: toilet cleaner
-image: /images/uploads/toiletcleaner.png
+title: floor cleaner
+image: /images/uploads/floor-cleaner.png
 ---
-toilet clener
+floor cleaner
