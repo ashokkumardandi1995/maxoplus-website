@@ -28,6 +28,4 @@ jobs:
           # "[skip ci]" ensures this automated commit won't accidentally trigger another workflow run
           git commit -m "Update products.json [skip ci]" || exit 0
           
-          git push
-
-          
+          git push      
