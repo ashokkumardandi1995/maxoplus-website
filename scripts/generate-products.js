@@ -9,35 +9,45 @@ const products = [];
 const files = fs.readdirSync(productsDir);
 
 files.forEach(file => {
-  if (!file.endsWith(".md")) return;
+if (!file.endsWith(".md")) return;
 
-  const content = fs.readFileSync(
-    path.join(productsDir, file),
-    "utf8"
-  );
+const content = fs.readFileSync(
+path.join(productsDir, file),
+"utf8"
+);
 
-  const titleMatch = content.match(/title:\s*(.*)/);
-  const imageMatch = content.match(/image:\s*(.*)/);
-  const descMatch = content.match(/description:\s*(.*)/);
+const titleMatch = content.match(/title:\s*(.+)/);
+const imageMatch = content.match(/image:\s*(.+)/);
 
-  products.push({
-    title: titleMatch
-      ? titleMatch[1].replace(/"/g, "").trim()
-      : "",
+const descMatch = content.match(
+/description:\s*([\s\S]*?)---/m
+);
 
-    image: imageMatch
-      ? imageMatch[1].replace(/"/g, "").trim()
-      : "",
+products.push({
+title: titleMatch
+? titleMatch[1].replace(/"/g, "").trim()
+: "",
 
-    description: descMatch
-      ? descMatch[1].replace(/"/g, "").trim()
-      : ""
-  });
+```
+image: imageMatch
+  ? imageMatch[1].replace(/"/g, "").trim()
+  : "",
+
+description: descMatch
+  ? descMatch[1]
+      .replace(/"/g, "")
+      .replace(/\n/g, " ")
+      .replace(/\s+/g, " ")
+      .trim()
+  : ""
+```
+
+});
 });
 
 fs.writeFileSync(
-  outputFile,
-  JSON.stringify(products, null, 2)
+outputFile,
+JSON.stringify(products, null, 2)
 );
 
 console.log("products.json generated");
