@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "title": "Dishwash",
+    "image": "/images/uploads/dishwash.png",
+    "description": ""
+  },
+  {
+    "title": "\"Floor cleaner \"",
+    "image": "/images/uploads/floor-cleaner.png",
+    "description": "Premium floor cleaner with long-lasting fragrance. Removes dirt,"
+  },
+  {
+    "title": "Hand wash",
+    "image": "/images/uploads/handwash.png",
+    "description": ""
+  },
+  {
+    "title": "\"Pinoyl \"",
+    "image": "/images/uploads/chatgpt-image-jun-20-2026-05_53_21-pm.png",
+    "description": ">-"
+  },
+  {
+    "title": "test 1",
+    "image": "/images/uploads/akd.jpg",
+    "description": "test 1 discription"
+  },
+  {
+    "title": "\"Toilet cleaner \"",
+    "image": "/images/uploads/toiletcleaner.png",
+    "description": ""
+  }
+]
