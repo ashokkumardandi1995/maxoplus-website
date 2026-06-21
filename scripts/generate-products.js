@@ -28,7 +28,6 @@ title: titleMatch
 ? titleMatch[1].replace(/"/g, "").trim()
 : "",
 
-```
 image: imageMatch
   ? imageMatch[1].replace(/"/g, "").trim()
   : "",
@@ -40,7 +39,6 @@ description: descMatch
       .replace(/\s+/g, " ")
       .trim()
   : ""
-```
 
 });
 });
