@@ -1,6 +1,6 @@
 ---
 title: "Floor cleaner "
 image: /images/uploads/floor-cleaner.png
-description: Effective dish wash gel that cuts through tough grease and food
-  residue, leaving utensils sparkling clean and fresh.
+description: Premium floor cleaner with long-lasting fragrance. Removes dirt,
+  stains, and germs while keeping floors fresh and hygienic.
 ---
