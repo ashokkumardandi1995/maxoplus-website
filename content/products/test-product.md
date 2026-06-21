@@ -1,5 +1,5 @@
 ---
-title: test product
-image: /images/uploads/kajal1.jpg
-description: test product discription
+title: test 1
+image: /images/uploads/akd.jpg
+description: test 1 discription
 ---
