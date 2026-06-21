@@ -1,5 +1,5 @@
 ---
-title: Pinoyl
+title: Phenyl
 image: /images/uploads/chatgpt-image-jun-20-2026-05_53_21-pm.png
 description: "Strong disinfectant phenyl cleaner designed to clean, sanitize,
   and leave floors fresh with a pleasant fragrance. "
