@@ -1,7 +1,7 @@
 ---
-title: "Toilet cleaner "
+title: Toilet cleaner
 image: /images/uploads/toiletcleaner.png
 description: Powerful toilet cleaner that removes stubborn stains, kills germs,
-  and leaves toilets fresh, clean, and hygienic.
+  and keeps toilets fresh and hygienic.
 ---
 Toilet cleaner
