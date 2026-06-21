@@ -1,67 +1,62 @@
 backend:
-name: git-gateway
-branch: main
+  name: git-gateway
+  branch: main
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-
-* name: "products"
-  label: "Products"
-  folder: "content/products"
-  create: true
-  slug: "{{slug}}"
-
-  fields:
-
-  * label: "Product Name"
-    name: "title"
-    widget: "string"
-
-  * label: "Product Image"
-    name: "image"
-    widget: "image"
-
-  * label: "Description"
-    name: "description"
-    widget: "text"
-
-* name: "gallery"
-  label: "Gallery"
-  folder: "content/gallery"
-  create: true
-  slug: "{{slug}}"
-
-  fields:
-
-  * label: "Title"
-    name: "title"
-    widget: "string"
-
-  * label: "Image"
-    name: "image"
-    widget: "image"
-
-* name: "homepage"
-  label: "Homepage"
-
-  files:
-
-  * label: "Homepage Settings"
-    name: "homepage"
-    file: "content/homepage.md"
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
 
     fields:
+      - label: "Product Name"
+        name: "title"
+        widget: "string"
 
-    * label: "Banner Title"
-      name: "title"
-      widget: "string"
+      - label: "Product Image"
+        name: "image"
+        widget: "image"
 
-    * label: "Banner Image"
-      name: "banner"
-      widget: "image"
+      - label: "Description"
+        name: "description"
+        widget: "text"
 
-    * label: "Description"
-      name: "description"
-      widget: "text"
+  - name: "gallery"
+    label: "Gallery"
+    folder: "content/gallery"
+    create: true
+    slug: "{{slug}}"
+
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Image"
+        name: "image"
+        widget: "image"
+
+  - name: "homepage"
+    label: "Homepage"
+
+    files:
+      - label: "Homepage Settings"
+        name: "homepage"
+        file: "content/homepage.md"
+
+        fields:
+          - label: "Banner Title"
+            name: "title"
+            widget: "string"
+
+          - label: "Banner Image"
+            name: "banner"
+            widget: "image"
+
+          - label: "Description"
+            name: "description"
+            widget: "text"
