@@ -30,6 +30,11 @@
     "description": "Strong disinfectant phenyl cleaner designed to clean, sanitize, and leave floors fresh with a pleasant fragrance."
   },
   {
+    "title": "Test Auto",
+    "image": "/images/uploads/kajal1.jpg",
+    "description": "Auto deployment test"
+  },
+  {
     "title": "Toilet cleaner",
     "image": "/images/uploads/toiletcleaner.png",
     "description": "Powerful toilet cleaner that removes stubborn stains, kills germs, and keeps toilets fresh and hygienic."
