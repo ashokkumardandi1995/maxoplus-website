@@ -80,7 +80,7 @@ WA
 
 </footer>
 <script>
-fetch('products.json')
+fetch('products.json?v=' + Date.now())
   .then(response => response.json())
   .then(products => {
 
