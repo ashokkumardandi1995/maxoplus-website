@@ -17,22 +17,22 @@ files.forEach(file => {
   );
 
   const titleMatch = content.match(/title:\s*(.*)/);
+  const imageMatch = content.match(/image:\s*(.*)/);
+  const descMatch = content.match(/description:\s*(.*)/);
 
-const imageMatch = content.match(/image:\s*(.*)/);
+  products.push({
+    title: titleMatch
+      ? titleMatch[1].replace(/"/g, "").trim()
+      : "",
 
-const descMatch = content.match(/description:\s*(.*)/);
+    image: imageMatch
+      ? imageMatch[1].replace(/"/g, "").trim()
+      : "",
 
-
-
-products.push({
-
-  title: titleMatch ? titleMatch[1].replace(/"/g, '').trim() : "",
-
-  image: imageMatch ? imageMatch[1].trim() : "",
-
-  description: descMatch ? descMatch[1].replace(/"/g, '').trim() : ""
-
-});
+    description: descMatch
+      ? descMatch[1].replace(/"/g, "").trim()
+      : ""
+  });
 });
 
 fs.writeFileSync(
