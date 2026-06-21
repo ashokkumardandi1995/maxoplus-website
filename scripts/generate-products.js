@@ -18,7 +18,7 @@ files.forEach(file => {
 
   const titleMatch = content.match(/title:\s*(.*)/);
   const imageMatch = content.match(/image:\s*(.*)/);
-  const descMatch = content.match(/description:\s*(.*)/);
+  const descMatch = content.match(/description:\s*([^\n\r]*)/);
 
   products.push({
     title: titleMatch ? titleMatch[1].trim() : "",
