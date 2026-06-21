@@ -1,7 +1,7 @@
 ---
 title: Dishwash
 image: /images/uploads/dishwash.png
-description: Powerful bathroom cleaner that removes soap scum, hard water
-  stains, and dirt while leaving a fresh and pleasant fragrance.
+description: Effective dish wash gel that cuts through tough grease and food
+  residue, leaving utensils sparkling clean and fresh.
 ---
 Dishwash
