@@ -48,7 +48,21 @@ transition:.3s;
 nav a:hover{
 color:#0066cc;
 }
+.hero .btn:last-child{
 
+    background:#ff6600;
+
+    margin-left:10px;
+
+}
+
+
+
+.hero .btn:last-child:hover{
+
+    background:#e65c00;
+
+}
 .hero{
 min-height:80vh;
 display:flex;
