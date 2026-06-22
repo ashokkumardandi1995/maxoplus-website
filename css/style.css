@@ -104,38 +104,6 @@ box-shadow:0 10px 25px rgba(0,0,0,.15);
 .btn:hover{
 transform:translateY(-4px);
 }
-.hero-banner{
-    background: linear-gradient(135deg,#0066cc,#00c896);
-    color:white;
-    text-align:center;
-    padding:80px 20px;
-}
-
-.hero-banner h1{
-    font-size:48px;
-    margin-bottom:15px;
-}
-
-.hero-banner p{
-    font-size:22px;
-    margin-bottom:30px;
-}
-
-.launches{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
-    margin-bottom:30px;
-}
-
-.launches span{
-    background:white;
-    color:#0066cc;
-    padding:8px 15px;
-    border-radius:20px;
-    font-weight:600;
-}
 .page-banner{
 padding:100px 20px;
 text-align:center;
