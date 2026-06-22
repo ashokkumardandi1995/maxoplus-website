@@ -74,27 +74,9 @@ Premium Cleaning Solutions For Every Home
 
   <h2>Latest Updates & Offers</h2>
 
-  <div class="offers-grid">
+ <div class="offers-grid" id="offers-container">
 
-    <div class="offer-box">
-      <span>🎉</span>
-      <h3>New Bathroom Cleaner Launch</h3>
-      <p>Powerful formula for sparkling clean bathrooms.</p>
-    </div>
-
-    <div class="offer-box">
-      <span>🔥</span>
-      <h3>Special Dealer Pricing</h3>
-      <p>Exclusive pricing for distributors and dealers.</p>
-    </div>
-
-    <div class="offer-box">
-      <span>🚚</span>
-      <h3>Distributor Enquiries Open</h3>
-      <p>Join Maxo Plus and grow your business.</p>
-    </div>
-
-  </div>
+</div>
 
 </section>
 <section class="contact-strip">
@@ -135,6 +117,27 @@ WhatsApp
 
 
 </footer>
+<script>
+fetch('offers.json')
+  .then(res => res.json())
+  .then(offers => {
 
+    const container =
+      document.getElementById('offers-container');
+
+    offers.forEach(item => {
+
+      container.innerHTML += `
+        <div class="offer-box">
+          <span>${item.icon}</span>
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+        </div>
+      `;
+
+    });
+
+  });
+</script>
 </body>
 </html>
