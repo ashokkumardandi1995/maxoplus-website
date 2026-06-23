@@ -10,7 +10,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#eef3f8;
+background:#ffffff;
 color:#333;
 overflow-x:hidden;
 }
@@ -20,16 +20,14 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:18px 8%;
-background:rgba(255,255,255,0.95);
-backdrop-filter:blur(15px);
--webkit-backdrop-filter:blur(15px);
-box-shadow:0 8px 25px rgba(0,0,0,.08);
+background:rgba(255,255,255,.95);
+backdrop-filter:blur(12px);
+box-shadow:0 5px 25px rgba(0,0,0,.08);
 position:sticky;
 top:0;
 z-index:1000;
 border-bottom:1px solid rgba(0,0,0,.05);
 }
-
 .logo img{
 width:140px;
 height:auto;
