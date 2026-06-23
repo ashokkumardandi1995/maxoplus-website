@@ -236,6 +236,12 @@ margin-bottom:10px;
 .testimonials h2{
     margin-bottom:50px;
 }
+.faq h2{
+    font-size:40px;
+    color:#004aad;
+    text-align:center;
+    margin-bottom:50px;
+}
 .products{
     padding:100px 8%;
     background:white;
