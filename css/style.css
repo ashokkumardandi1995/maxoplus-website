@@ -31,8 +31,13 @@ border-bottom:1px solid rgba(0,0,0,.05);
 }
 
 .logo img{
-width:120px;
+width:140px;
 height:auto;
+transition:.3s;
+}
+
+.logo img:hover{
+transform:scale(1.05);
 }
 
 nav ul{
