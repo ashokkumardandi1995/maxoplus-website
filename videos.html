@@ -28,11 +28,50 @@
 <p>Watch Maxo Plus product demonstrations and advertisements.</p>
 </section>
 
-<section class="videos">
-<h2>Coming Soon</h2>
-<p>Product demo videos will be added here.</p>
+<section class="videos-page">
+
+<h1>Product Demo Videos</h1>
+
+<div class="video-grid" id="video-container">
+
+</div>
+
 </section>
 
+<script>
+fetch('videos.json?v=' + Date.now())
+.then(response => response.json())
+.then(videos => {
+
+const container =
+document.getElementById('video-container');
+
+videos.forEach(video => {
+
+container.innerHTML += `
+<div class="video-card">
+
+<div class="video-card">
+
+<video controls muted playsinline preload="metadata" poster="${video.thumbnail}">
+<source src="${video.video}" type="video/mp4">
+</video>
+
+<h3>${video.title}</h3>
+
+</div>
+<source src="${video.video}" type="video/mp4">
+</video>
+
+<h3>${video.title}</h3>
+
+</div>
+`;
+
+});
+
+});
+</script>
 <footer>
 
     <h2>MAXO PLUS</h2>
