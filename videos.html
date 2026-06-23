@@ -53,9 +53,15 @@ videos.forEach(video => {
 container.innerHTML += `
 <div class="video-card">
 
+<div class="video-wrapper">
+
 <video controls muted playsinline preload="metadata" poster="${video.thumbnail}" class="auto-video">
 <source src="${video.video}" type="video/mp4">
 </video>
+
+<div class="play-icon">▶</div>
+
+</div>
 
 <h3>${video.title}</h3>
 
