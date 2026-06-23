@@ -95,6 +95,30 @@ document.querySelectorAll('.auto-video')
 
 },1000);
 </script>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+document.querySelectorAll("video").forEach(video => {
+
+const playIcon =
+video.parentElement.querySelector(".play-icon");
+
+video.addEventListener("play", () => {
+playIcon.style.display = "none";
+});
+
+video.addEventListener("pause", () => {
+playIcon.style.display = "flex";
+});
+
+video.addEventListener("ended", () => {
+playIcon.style.display = "flex";
+});
+
+});
+
+});
+</script>
 <footer>
 
     <h2>MAXO PLUS</h2>
