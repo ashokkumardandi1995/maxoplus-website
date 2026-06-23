@@ -39,9 +39,21 @@ Watch product demonstrations, cleaning tips and Maxo Plus advertisements.
 <div class="video-grid" id="video-container">
 
 </div>
+<div id="videoModal" class="video-modal">
 
+<div class="video-modal-content">
+
+<span class="close-video">&times;</span>
+
+<video id="popupVideo" controls>
+</video>
+
+</div>
+
+</div>
 
     <script>
+        
 const observer = new IntersectionObserver(entries => {
 
 entries.forEach(entry => {
