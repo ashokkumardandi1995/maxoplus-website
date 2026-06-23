@@ -96,23 +96,50 @@ document.querySelectorAll('.auto-video')
 },1000);
 </script>
     <script>
-document.addEventListener("DOMContentLoaded", () => {
+fetch('videos.json?v=' + Date.now())
+.then(response => response.json())
+.then(videos => {
 
-document.querySelectorAll("video").forEach(video => {
+const container =
+document.getElementById('video-container');
+
+videos.forEach(video => {
+
+container.innerHTML += `
+<div class="video-card">
+
+<div class="video-wrapper">
+
+<video controls muted playsinline preload="metadata" poster="${video.thumbnail}" class="auto-video">
+<source src="${video.video}" type="video/mp4">
+</video>
+
+<div class="play-icon">▶</div>
+
+</div>
+
+<h3>${video.title}</h3>
+
+</div>
+`;
+
+});
+
+document.querySelectorAll('.auto-video').forEach(video => {
 
 const playIcon =
-video.parentElement.querySelector(".play-icon");
+video.parentElement.querySelector('.play-icon');
 
-video.addEventListener("play", () => {
-playIcon.style.display = "none";
+video.addEventListener('play', () => {
+playIcon.style.display = 'none';
 });
 
-video.addEventListener("pause", () => {
-playIcon.style.display = "flex";
+video.addEventListener('pause', () => {
+playIcon.style.display = 'flex';
 });
 
-video.addEventListener("ended", () => {
-playIcon.style.display = "flex";
+video.addEventListener('ended', () => {
+playIcon.style.display = 'flex';
 });
 
 });
