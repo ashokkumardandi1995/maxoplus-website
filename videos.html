@@ -90,7 +90,7 @@ container.innerHTML += `
 
 <div class="video-wrapper">
 
-<video controls muted playsinline preload="metadata" poster="${video.thumbnail}" class="auto-video">
+<video muted playsinline preload="metadata" poster="${video.thumbnail}" class="auto-video">
 <source src="${video.video}" type="video/mp4">
 </video>
 
@@ -148,6 +148,57 @@ playIcon.style.display = 'flex';
     <p>&copy; 2026 Maxo Plus. All Rights Reserved.</p>
 
 </footer>
+<script>
 
+const modal =
+document.getElementById('videoModal');
+
+const popupVideo =
+document.getElementById('popupVideo');
+
+const closeBtn =
+document.querySelector('.close-video');
+
+document.addEventListener('click', function(e){
+
+if(e.target.tagName === 'VIDEO' &&
+e.target.classList.contains('auto-video')){
+
+popupVideo.src =
+e.target.querySelector('source').src;
+
+modal.style.display = 'block';
+
+popupVideo.play();
+
+}
+
+});
+
+closeBtn.addEventListener('click', () => {
+
+popupVideo.pause();
+
+popupVideo.src = '';
+
+modal.style.display = 'none';
+
+});
+
+modal.addEventListener('click', (e) => {
+
+if(e.target === modal){
+
+popupVideo.pause();
+
+popupVideo.src = '';
+
+modal.style.display = 'none';
+
+}
+
+});
+
+</script>
 </body>
 </html>
