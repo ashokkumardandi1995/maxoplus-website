@@ -168,6 +168,28 @@ fetch('offers.json')
     });
 
   });
+    <script>
+fetch('benefits.json')
+  .then(res => res.json())
+  .then(benefits => {
+
+    const container =
+      document.getElementById('benefits-container');
+
+    benefits.forEach(item => {
+
+      container.innerHTML += `
+        <div class="offer-box">
+          <span>${item.icon}</span>
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+        </div>
+      `;
+
+    });
+
+  });
+</script>
 </script>
 </body>
 </html>
