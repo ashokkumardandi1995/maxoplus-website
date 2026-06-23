@@ -226,6 +226,9 @@ margin-bottom:10px;
 .benefits{
     padding:80px 20px;
 }
+.benefits h2{
+    margin-bottom:50px;
+}
 .products{
     padding:100px 8%;
     background:white;
