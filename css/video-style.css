@@ -1,25 +1,56 @@
+.videos-page{
+    padding:80px 20px 100px;
+    text-align:center;
+    background:#f8fafc;
+}
+
+.videos-page h1{
+    font-size:40px;
+    color:#004aad;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.video-subtitle{
+    max-width:700px;
+    margin:0 auto 50px;
+    font-size:18px;
+    color:#666;
+    line-height:1.7;
+}
+
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    max-width:1200px;
+    margin:0 auto 80px;
+}
+
 .video-card{
     background:#ffffff;
-    padding:20px;
+    padding:15px;
     border-radius:20px;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
     transition:.3s;
     overflow:hidden;
 }
-.videos-page h1{
-font-size:40px;
-color:#004aad;
-margin-bottom:50px;
-text-align:center;
-width:100%;
-display:block;
-}
+
 .video-card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-8px);
     box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
+
 .video-wrapper{
     position:relative;
+}
+
+.video-card video{
+    width:100%;
+    aspect-ratio:9/16;
+    object-fit:cover;
+    border-radius:15px;
+    display:block;
 }
 
 .play-icon{
@@ -39,44 +70,26 @@ display:block;
     pointer-events:none;
 }
 
-.video-card:hover .play-icon{
-    transform:translate(-50%,-50%) scale(1.1);
-}
-.video-subtitle{
-    max-width:700px;
-    margin:0 auto 50px;
-    font-size:18px;
-    color:#666;
-    line-height:1.7;
-}
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:40px;
-    max-width:1400px;
-    margin:auto;
-    margin-bottom:80px;
-}
-.videos-page{
-    padding:80px 20px 150px;
-    text-align:center;
-    background:#f8fafc;
-}
-.video-card video{
-    width:100%;
-    aspect-ratio:9/16;
-    object-fit:cover;
-    border-radius:15px;
-    transition:.3s;
-}
-
-.video-card:hover video{
-    transform:scale(1.03);
-}
-
 .video-card h3{
     margin-top:15px;
     color:#004aad;
-    font-size:24px;
+    font-size:22px;
     font-weight:700;
+    text-align:center;
+}
+
+@media(max-width:768px){
+
+    .video-grid{
+        grid-template-columns:1fr;
+        max-width:320px;
+    }
+
+    .videos-page h1{
+        font-size:32px;
+    }
+
+    .video-subtitle{
+        font-size:16px;
+    }
 }
