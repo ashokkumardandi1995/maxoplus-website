@@ -236,6 +236,13 @@ margin-bottom:10px;
 .testimonials h2{
     margin-bottom:50px;
 }
+.faq{
+    padding:80px 20px;
+}
+
+.faq .offer-box{
+    margin-bottom:20px;
+}
 .faq h2{
     font-size:40px;
     color:#004aad;
