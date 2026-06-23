@@ -47,7 +47,7 @@
 
 .video-card video{
     width:100%;
-    aspect-ratio:9/16;
+    height:420px;
     object-fit:cover;
     border-radius:15px;
     display:block;
