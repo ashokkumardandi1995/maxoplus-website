@@ -40,39 +40,7 @@ Watch product demonstrations, cleaning tips and Maxo Plus advertisements.
 
 </div>
 
-<script>
-fetch('videos.json?v=' + Date.now())
-.then(response => response.json())
-.then(videos => {
 
-const container =
-document.getElementById('video-container');
-
-videos.forEach(video => {
-
-container.innerHTML += `
-<div class="video-card">
-
-<div class="video-wrapper">
-
-<video controls muted playsinline preload="metadata" poster="${video.thumbnail}" class="auto-video">
-<source src="${video.video}" type="video/mp4">
-</video>
-
-<div class="play-icon">▶</div>
-
-</div>
-
-<h3>${video.title}</h3>
-
-</div>
-`;
-
-});
-
-});
-    
-</script>
     <script>
 const observer = new IntersectionObserver(entries => {
 
