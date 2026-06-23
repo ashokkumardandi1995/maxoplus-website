@@ -62,6 +62,29 @@ container.innerHTML += `
 });
 
 });
+    
+</script>
+    <script>
+const observer = new IntersectionObserver(entries => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+entry.target.play();
+}else{
+entry.target.pause();
+}
+
+});
+
+},{threshold:0.7});
+
+setTimeout(() => {
+
+document.querySelectorAll('.auto-video')
+.forEach(video => observer.observe(video));
+
+},1000);
 </script>
 <footer>
 
