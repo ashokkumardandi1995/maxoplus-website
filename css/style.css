@@ -110,12 +110,14 @@ width:50%;
 font-size:64px;
 line-height:1.1;
 margin-bottom:20px;
+color:#004aad;
 }
 
 .hero-left p{
 font-size:24px;
 margin-bottom:30px;
 max-width:600px;
+color:#444;
 }
 
 .hero-right{
