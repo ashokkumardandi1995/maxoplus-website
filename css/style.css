@@ -10,7 +10,7 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#f5f7fa;
+background:#eef3f8;
 color:#333;
 overflow-x:hidden;
 }
@@ -19,12 +19,15 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 8%;
-background:#fff;
-box-shadow:0 2px 15px rgba(0,0,0,.08);
+padding:18px 8%;
+background:rgba(255,255,255,0.95);
+backdrop-filter:blur(15px);
+-webkit-backdrop-filter:blur(15px);
+box-shadow:0 8px 25px rgba(0,0,0,.08);
 position:sticky;
 top:0;
 z-index:1000;
+border-bottom:1px solid rgba(0,0,0,.05);
 }
 
 .logo img{
@@ -34,19 +37,36 @@ height:auto;
 
 nav ul{
 display:flex;
-gap:30px;
+gap:40px;
 list-style:none;
 }
 
 nav a{
 text-decoration:none;
 color:#222;
-font-weight:600;
+font-weight:700;
+font-size:17px;
 transition:.3s;
+position:relative;
 }
 
 nav a:hover{
 color:#0066cc;
+}
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:0;
+height:3px;
+background:#0066cc;
+transition:.3s;
+border-radius:10px;
+}
+
+nav a:hover::after{
+width:100%;
 }
 .hero .btn:last-child{
 
