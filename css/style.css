@@ -94,8 +94,12 @@ display:flex;
 align-items:center;
 justify-content:space-between;
 padding:80px 8%;
-background:linear-gradient(135deg,#0066cc,#00b894);
-color:white;
+background:linear-gradient(
+180deg,
+#ffffff 0%,
+#f5f9ff 100%
+);
+color:#222;
 }
 
 .hero-left{
