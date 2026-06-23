@@ -37,8 +37,6 @@
 
 </div>
 
-</section>
-
 <script>
 fetch('videos.json?v=' + Date.now())
 .then(response => response.json())
@@ -52,15 +50,7 @@ videos.forEach(video => {
 container.innerHTML += `
 <div class="video-card">
 
-<div class="video-card">
-
 <video controls muted playsinline preload="metadata" poster="${video.thumbnail}">
-<source src="${video.video}" type="video/mp4">
-</video>
-
-<h3>${video.title}</h3>
-
-</div>
 <source src="${video.video}" type="video/mp4">
 </video>
 
