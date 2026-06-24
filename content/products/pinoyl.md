@@ -1,6 +1,6 @@
 ---
-title: Phenyl
-image: /images/uploads/phenyl1.png
+title: Maxo Plus Phenyl
+image: /images/uploads/maxo-plus-phenyl.jpeg
 description: "Strong disinfectant phenyl cleaner designed to clean, sanitize,
   and leave floors fresh with a pleasant fragrance. "
 ---
