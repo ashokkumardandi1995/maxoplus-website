@@ -60,3 +60,42 @@ collections:
           - label: "Description"
             name: "description"
             widget: "text"
+ - name: "videos"
+    label: "Videos"
+    folder: "content/videos"
+    create: true
+    slug: "{{slug}}"
+
+    fields:
+      - label: "Video Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Video File"
+        name: "video"
+        widget: "file"
+
+      - label: "Thumbnail"
+        name: "thumbnail"
+        widget: "image"
+
+  - name: "homepage"
+    label: "Homepage"
+
+    files:
+      - label: "Homepage Settings"
+        name: "homepage"
+        file: "content/homepage.md"
+
+        fields:
+          - label: "Banner Title"
+            name: "title"
+            widget: "string"
+
+          - label: "Banner Image"
+            name: "banner"
+            widget: "image"
+
+          - label: "Description"
+            name: "description"
+            widget: "text"
