@@ -41,6 +41,47 @@ display:flex;
 gap:40px;
 list-style:none;
 }
+.menu-toggle{
+display:none;
+font-size:30px;
+cursor:pointer;
+font-weight:bold;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:row;
+justify-content:space-between;
+align-items:center;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+padding:20px 0;
+box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.nav-links li{
+text-align:center;
+padding:10px 0;
+}
+
+}
 
 nav a{
 text-decoration:none;
