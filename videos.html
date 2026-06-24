@@ -126,32 +126,29 @@ playIcon.style.display = 'flex';
 });
 
 });
-</script>
-<footer>
-
-    <h2>MAXO PLUS</h2>
-
-    <p>Premium Cleaning Solutions For Every Home</p>
-
-   <p>
-  Phone:
-  <a href="tel:+919493945946">
-    +91 9493945946
-  </a>
-</p>
-
-    <p>Email: maxopluscare@gmail.com</p>
-
-    <p>Website: www.maxoplus.in</p>
-
-    <br>
-
-    <p>&copy; 2026 Maxo Plus. All Rights Reserved.</p>
-
-</div>
 </section>
 
 <footer>
+
+<h2>MAXO PLUS</h2>
+
+<p>Premium Cleaning Solutions For Every Home</p>
+
+<p>
+Phone:
+<a href="tel:+919493945946">+91 9493945946</a>
+</p>
+
+<p>Email: maxopluscare@gmail.com</p>
+
+<p>Website: www.maxoplus.in</p>
+
+<br>
+
+<p>&copy; 2026 Maxo Plus. All Rights Reserved.</p>
+
+</footer>
+
 <script>
 
 const modal =
@@ -170,9 +167,10 @@ e.target.classList.contains('auto-video')){
 
 popupVideo.src =
 e.target.querySelector('source').src;
-    
+
 document.getElementById('popupTitle').innerText =
 e.target.closest('.video-card').querySelector('h3').innerText;
+
 modal.style.display = 'block';
 
 popupVideo.play();
@@ -184,9 +182,7 @@ popupVideo.play();
 closeBtn.addEventListener('click', () => {
 
 popupVideo.pause();
-
 popupVideo.src = '';
-
 modal.style.display = 'none';
 
 });
@@ -196,9 +192,7 @@ modal.addEventListener('click', (e) => {
 if(e.target === modal){
 
 popupVideo.pause();
-
 popupVideo.src = '';
-
 modal.style.display = 'none';
 
 }
@@ -206,5 +200,6 @@ modal.style.display = 'none';
 });
 
 </script>
+
 </body>
 </html>
