@@ -57,7 +57,8 @@ align-items:center;
 }
 
 .menu-toggle{
-display:block;
+display:block
+margin-left:auto;
 }
 
 .nav-links{
