@@ -48,8 +48,9 @@ display:none;
 font-size:30px;
 cursor:pointer;
 font-weight:bold;
+z-index:9999;
+position:relative;
 }
-
 @media(max-width:768px){
 
 nav{
