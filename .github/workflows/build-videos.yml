@@ -32,4 +32,3 @@ steps:
       git commit -m "Update videos.json [skip ci]" || exit 0
 
       git push
-```
