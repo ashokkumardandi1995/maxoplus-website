@@ -11,17 +11,23 @@
 <body>
 
 <nav>
+
 <div class="logo">
 <img src="images/maxoplus.png" alt="Maxo Plus">
 </div>
 
-<ul>
+<div class="menu-toggle">
+☰
+</div>
+
+<ul class="nav-links">
 <li><a href="index.html">Home</a></li>
 <li><a href="products.html">Products</a></li>
 <li><a href="videos.html">Videos</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="contact.html">Contact</a></li>
 </ul>
+
 </nav>
 
 <section class="page-banner">
@@ -200,6 +206,20 @@ modal.style.display = 'none';
 });
 
 </script>
+<script>
 
+const menuToggle =
+document.querySelector('.menu-toggle');
+
+const navLinks =
+document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+
+navLinks.classList.toggle('active');
+
+});
+
+</script>
 </body>
 </html>
