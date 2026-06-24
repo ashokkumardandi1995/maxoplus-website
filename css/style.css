@@ -35,7 +35,9 @@ transition:.3s;
 .logo img:hover{
 transform:scale(1.05);
 }
-
+.logo{
+margin-right:auto;
+}
 nav ul{
 display:flex;
 gap:40px;
