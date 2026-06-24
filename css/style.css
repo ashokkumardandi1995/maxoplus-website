@@ -495,11 +495,12 @@ align-self:center;
 }
 
 footer{
+    width:100%;
     background:#0f172a;
     color:white;
     text-align:center;
-    padding:50px 20px;
-    width:100%;
+    padding:60px 20px;
+    margin-top:0;
     clear:both;
 }
 
