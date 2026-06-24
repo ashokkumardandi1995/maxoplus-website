@@ -126,6 +126,12 @@ cursor:pointer;
     .video-grid{
         grid-template-columns:1fr;
         max-width:320px;
+        justify-content:center;
+        padding-left:0;
+        padding-right:0;
+        display:flex;
+        align-items:center;
+        gap:20px;
     }
 
     .videos-page h1{
