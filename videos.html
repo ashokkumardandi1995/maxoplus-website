@@ -38,15 +38,15 @@ Watch product demonstrations, cleaning tips and Maxo Plus advertisements.
 </p>
 <div class="video-grid" id="video-container">
 
-</div>
 <div id="videoModal" class="video-modal">
 
 <div class="video-modal-content">
 
 <span class="close-video">&times;</span>
 
-<video id="popupVideo" controls>
-</video>
+<h3 id="popupTitle"></h3>
+
+<video id="popupVideo" controls></video>
 
 </div>
 
@@ -166,7 +166,9 @@ e.target.classList.contains('auto-video')){
 
 popupVideo.src =
 e.target.querySelector('source').src;
-
+    
+document.getElementById('popupTitle').innerText =
+e.target.closest('.video-card').querySelector('h3').innerText;
 modal.style.display = 'block';
 
 popupVideo.play();
