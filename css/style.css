@@ -515,7 +515,22 @@ margin:8px 0;
 
 nav{
 flex-direction:column;
-gap:15px;
+gap:10px;
+padding:15px;
+}
+
+.logo img{
+width:100px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+}
+
+nav a{
+font-size:14px;
 }
 
 .hero{
