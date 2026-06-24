@@ -611,50 +611,7 @@ grid-template-columns:1fr 1fr;
 
 }
 
-@media(max-width:900px){
 
-nav{
-flex-direction:column;
-gap:15px;
-}
-
-.hero{
-flex-direction:column;
-text-align:center;
-}
-
-.hero-left,
-.hero-right{
-width:100%;
-}
-
-.hero-left h1{
-font-size:42px;
-}
-
-.hero-left p{
-font-size:20px;
-}
-
-.contact-section,
-.about-section{
-grid-template-columns:1fr;
-}
-
-.about-intro{
-margin:40px 20px;
-padding:35px;
-}
-
-.about-intro h2{
-font-size:32px;
-}
-
-.product-grid{
-grid-template-columns:1fr;
-}
-
-}
 /* ===== ABOUT PAGE ===== */
 
 .about-intro{
