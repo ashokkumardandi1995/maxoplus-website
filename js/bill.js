@@ -43,7 +43,7 @@ ${options}
 </td>
 
 <td>
-<input type="number" class="price" value="0">
+<input type="number" class="price" readonly>
 </td>
 
 <td>
@@ -59,5 +59,58 @@ ${options}
 `;
 
 tbody.appendChild(row);
+
+updateRow(row);
+
+row.querySelector(".product").onchange = () => updateRow(row);
+
+row.querySelector(".qty").oninput = () => updateRow(row);
+
+row.querySelector(".removeBtn").onclick = () => {
+
+row.remove();
+
+calculateGrandTotal();
+
+};
+
+}
+function updateRow(row){
+
+const productIndex =
+row.querySelector(".product").value;
+
+const product =
+products[productIndex];
+
+const price = Number(product.price || 0);
+
+const qty =
+Number(row.querySelector(".qty").value);
+
+row.querySelector(".price").value = price;
+
+row.querySelector(".total").innerText =
+(price * qty).toFixed(2);
+
+calculateGrandTotal();
+
+}
+
+function calculateGrandTotal(){
+
+let total = 0;
+
+document.querySelectorAll("#productBody tr")
+.forEach(row=>{
+
+total += Number(
+row.querySelector(".total").innerText
+);
+
+});
+
+document.getElementById("grandTotal")
+.innerText = total.toFixed(2);
 
 }
