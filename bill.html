@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Maxo Plus Billing</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+<img src="images/maxoplus.png" alt="Maxo Plus">
+</div>
+
+<div class="menu-toggle">☰</div>
+
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="videos.html">Videos</a></li>
+<li><a href="bill.html">Billing</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="page-banner">
+<h1>Invoice Generator</h1>
+<p>Create professional Maxo Plus invoices.</p>
+</section>
+
+<section class="contact-form-section">
+
+<h2>Customer Details</h2>
+
+<form id="billForm">
+
+<input
+type="text"
+id="customerName"
+placeholder="Customer Name"
+required>
+
+<input
+type="text"
+id="customerPhone"
+placeholder="Phone Number">
+
+<textarea
+id="customerAddress"
+placeholder="Customer Address"></textarea>
+
+</form>
+
+</section>
+
+<footer>
+
+<h2>MAXO PLUS</h2>
+
+<p>Premium Cleaning Solutions For Every Home</p>
+
+</footer>
+
+<script>
+
+const menuToggle =
+document.querySelector(".menu-toggle");
+
+const navLinks =
+document.querySelector(".nav-links");
+
+menuToggle.onclick = () => {
+
+navLinks.classList.toggle("active");
+
+menuToggle.innerHTML =
+navLinks.classList.contains("active") ? "✕" : "☰";
+
+};
+
+</script>
+
+</body>
+</html>
