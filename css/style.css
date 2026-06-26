@@ -56,6 +56,40 @@ font-weight:bold;
 z-index:9999;
 position:relative;
 }
+#productTable{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+#productTable th,
+#productTable td{
+border:1px solid #ddd;
+padding:12px;
+text-align:center;
+}
+
+#productTable th{
+background:#004aad;
+color:#fff;
+}
+
+#productTable select,
+#productTable input{
+width:100%;
+padding:8px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+
+.removeBtn{
+background:red;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:6px;
+cursor:pointer;
+}
 @media(max-width:768px){
 
 nav{
