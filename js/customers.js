@@ -54,6 +54,7 @@ function searchCustomer(){
         };
 
         list.appendChild(item);
+        list.style.display="block";
 
     });
 
