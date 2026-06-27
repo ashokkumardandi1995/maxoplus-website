@@ -189,6 +189,7 @@ row.querySelector(".total").innerText
 });
 
 createPDF(invoice);
+  
 
 }
 
