@@ -308,17 +308,21 @@ doc.setFont("helvetica","bold");
 
 doc.setFillColor(0,74,173);
 
-doc.rect(120, finalY-8, 70, 12, "F");
+doc.roundedRect(105, finalY-6, 85, 12, 2, 2, "F");
 
 doc.setTextColor(255,255,255);
 
-doc.setFontSize(12);
+doc.setFontSize(11);
+
+doc.setFont("helvetica","bold");
 
 doc.text(
 "Grand Total : ₹ " + invoice.grandTotal,
-155,
-finalY,
-{align:"center"}
+147,
+finalY + 2,
+{
+align:"center"
+}
 );
 
 doc.setTextColor(0,0,0);
