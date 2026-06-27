@@ -3,88 +3,70 @@ let customers = [];
 fetch("data/customers.json?v=" + Date.now())
 .then(res => res.json())
 .then(data => {
-
     customers = data;
-
 });
 
-const searchBox =
-document.getElementById("customerSearch");
+const searchBox = document.getElementById("customerSearch");
+const list = document.getElementById("customerList");
 
 searchBox.addEventListener("input", searchCustomer);
 
 function searchCustomer(){
 
-const value =
-searchBox.value.toLowerCase().trim();
+    const value = searchBox.value.toLowerCase().trim();
 
-const list =
-document.getElementById("customerList");
+    list.innerHTML = "";
 
-list.innerHTML = "";
+    if(value === ""){
+        return;
+    }
 
-if(value===""){
-return;
-}
+    const result = customers.filter(c =>
+        c.name.toLowerCase().includes(value) ||
+        c.phone.includes(value) ||
+        c.gst.toLowerCase().includes(value)
+    );
 
-const result =
-customers.filter(c=>
+    result.forEach(customer => {
 
-c.name.toLowerCase().includes(value) ||
+        const item = document.createElement("div");
 
-c.phone.includes(value) ||
+        item.className = "customerItem";
 
-c.gst.toLowerCase().includes(value)
+        item.innerHTML = `
+            <b>${customer.name}</b><br>
+            ${customer.phone}<br>
+            ${customer.gst}
+        `;
 
-);
+        item.onclick = function(){
 
-result.forEach(customer=>{
+            searchBox.value = customer.name;
 
-const item =
-document.createElement("div");
+            document.getElementById("customerName").value = customer.name;
+            document.getElementById("customerPhone").value = customer.phone;
+            document.getElementById("customerGST").value = customer.gst;
+            document.getElementById("customerAddress").value = customer.address;
 
-item.className = "customerItem";
+            list.innerHTML = "";
 
-item.innerHTML =
-`
-<b>${customer.name}</b><br>
-${customer.phone}<br>
-${customer.gst}
-`;
+        };
 
-item.onclick = function(){
+        list.appendChild(item);
 
-searchBox.value = customer.name;
-
-document.getElementById("customerName").value =
-customer.name;
-
-document.getElementById("customerPhone").value =
-customer.phone;
-
-document.getElementById("customerGST").value =
-customer.gst;
-
-document.getElementById("customerAddress").value =
-customer.address;
-
-list.style.display = "none";
+    });
 
 }
-    document
-.getElementById("clearCustomer")
-.onclick=function(){
 
-searchBox.value="";
+document.getElementById("clearCustomer").onclick = function(){
 
-document.getElementById("customerName").value="";
+    searchBox.value = "";
 
-document.getElementById("customerPhone").value="";
+    document.getElementById("customerName").value = "";
+    document.getElementById("customerPhone").value = "";
+    document.getElementById("customerGST").value = "";
+    document.getElementById("customerAddress").value = "";
 
-document.getElementById("customerGST").value="";
+    list.innerHTML = "";
 
-document.getElementById("customerAddress").value="";
-
-document.getElementById("customerList").innerHTML="";
-
-}
+};
