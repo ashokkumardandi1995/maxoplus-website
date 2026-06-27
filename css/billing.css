@@ -123,3 +123,26 @@ padding:10px;
 margin:4px 0;
 color:#555;
 }
+.invoice-divider{
+margin:30px 0;
+border:none;
+border-top:2px solid #e5e7eb;
+}
+.invoice-info{
+background:#f8f9fb;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+min-width:260px;
+}
+
+.invoice-info label{
+font-weight:bold;
+margin-bottom:5px;
+display:block;
+color:#004aad;
+}
+
+.invoice-info input{
+margin-bottom:15px;
+}
