@@ -72,13 +72,13 @@ row.querySelector(".product").onchange = () => updateRow(row);
 
 row.querySelector(".qty").oninput = () => updateRow(row);
 
-row.querySelector(".removeBtn").onclick = () => {
+row.querySelector(".removeBtn").addEventListener("click", function(){
 
 row.remove();
 
 calculateGrandTotal();
 
-};
+});
 
 }
 function updateRow(row){
