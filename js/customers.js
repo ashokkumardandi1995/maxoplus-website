@@ -71,3 +71,20 @@ customer.address;
 list.style.display = "none";
 
 }
+    document
+.getElementById("clearCustomer")
+.onclick=function(){
+
+searchBox.value="";
+
+document.getElementById("customerName").value="";
+
+document.getElementById("customerPhone").value="";
+
+document.getElementById("customerGST").value="";
+
+document.getElementById("customerAddress").value="";
+
+document.getElementById("customerList").innerHTML="";
+
+}
