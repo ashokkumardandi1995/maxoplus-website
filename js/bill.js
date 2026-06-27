@@ -288,7 +288,16 @@ halign:"center"
 }
 
 });
+const finalY = doc.lastAutoTable.finalY + 12;
 
+doc.setFontSize(14);
+doc.setFont("helvetica","bold");
+
+doc.text(
+"Grand Total : ₹ " + invoice.grandTotal,
+140,
+finalY
+);
 doc.save(invoice.invoiceNo + ".pdf");
 
 }
