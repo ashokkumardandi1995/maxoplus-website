@@ -279,12 +279,25 @@ body:rows,
 theme:"grid",
 
 headStyles:{
-fillColor:[0,74,173]
+fillColor:[0,74,173],
+halign:"center"
 },
 
 styles:{
 fontSize:10,
+valign:"middle",
 halign:"center"
+},
+
+columnStyles:{
+
+0:{cellWidth:60,halign:"left"},
+1:{cellWidth:18},
+2:{cellWidth:18},
+3:{cellWidth:25},
+4:{cellWidth:28},
+5:{cellWidth:32}
+
 }
 
 });
