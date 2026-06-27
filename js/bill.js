@@ -70,7 +70,11 @@ updateRow(row);
 
 row.querySelector(".product").onchange = () => updateRow(row);
 
-row.querySelector(".qty").oninput = () => updateRow(row);
+row.querySelector(".boxes").oninput = () => updateRow(row);
+
+row.querySelector(".units").oninput = () => updateRow(row);
+
+row.querySelector(".price").oninput = () => updateRow(row);
 
 row.querySelector(".removeBtn").addEventListener("click", function(){
 
