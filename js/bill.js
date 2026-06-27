@@ -83,21 +83,23 @@ calculateGrandTotal();
 }
 function updateRow(row){
 
-const productIndex =
-row.querySelector(".product").value;
+const boxes =
+Number(row.querySelector(".boxes").value);
 
-const product =
-products[productIndex];
+const units =
+Number(row.querySelector(".units").value);
 
-const price = Number(product.price || 0);
+const price =
+Number(row.querySelector(".price").value);
 
-const qty =
-Number(row.querySelector(".qty").value);
+const totalUnits =
+(boxes * 12) + units;
 
-row.querySelector(".price").value = price;
+row.querySelector(".totalUnits").innerText =
+totalUnits;
 
 row.querySelector(".total").innerText =
-(price * qty).toFixed(2);
+(totalUnits * price).toFixed(2);
 
 calculateGrandTotal();
 
