@@ -43,6 +43,39 @@
 
 <form id="billForm">
 
+<div class="invoice-header">
+
+<div class="company-info">
+
+<h2>MAXO PLUS</h2>
+
+<p>Premium Cleaning Solutions</p>
+
+</div>
+
+<div class="invoice-info">
+
+<label>Invoice No.</label>
+
+<input
+type="text"
+id="invoiceNo"
+value="INV-0001">
+
+<label>Invoice Date</label>
+
+<input
+type="date"
+id="invoiceDate">
+
+</div>
+
+</div>
+
+<hr>
+
+<h2>Customer Details</h2>
+
 <input
 type="text"
 id="customerName"
@@ -53,6 +86,11 @@ required>
 type="text"
 id="customerPhone"
 placeholder="Phone Number">
+
+<input
+type="text"
+id="customerGST"
+placeholder="GST Number (Optional)">
 
 <textarea
 id="customerAddress"
