@@ -128,3 +128,68 @@ document.getElementById("grandTotal")
 }
 document.getElementById("invoiceDate").value =
 new Date().toISOString().split("T")[0];
+document
+.getElementById("generateInvoice")
+.addEventListener("click", generateInvoice);
+
+function generateInvoice(){
+
+const invoice = {
+
+invoiceNo:
+document.getElementById("invoiceNo").value,
+
+invoiceDate:
+document.getElementById("invoiceDate").value,
+
+customerName:
+document.getElementById("customerName").value,
+
+customerPhone:
+document.getElementById("customerPhone").value,
+
+customerGST:
+document.getElementById("customerGST").value,
+
+customerAddress:
+document.getElementById("customerAddress").value,
+
+grandTotal:
+document.getElementById("grandTotal").innerText,
+
+products:[]
+
+};
+
+document
+.querySelectorAll("#productBody tr")
+.forEach(row=>{
+
+invoice.products.push({
+
+product:
+
+row.querySelector(".product")
+.options[
+row.querySelector(".product").selectedIndex
+].text,
+
+boxes:
+row.querySelector(".boxes").value,
+
+units:
+row.querySelector(".units").value,
+
+price:
+row.querySelector(".price").value,
+
+total:
+row.querySelector(".total").innerText
+
+});
+
+});
+
+console.log(invoice);
+
+}
