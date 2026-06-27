@@ -10,9 +10,7 @@ document.getElementById("addProduct").click();
 
 });
 
-document
-.getElementById("addProduct")
-.addEventListener("click", addRow);
+document.getElementById("addProduct").addEventListener("click", addRow);
 
 function addRow(){
 
@@ -193,8 +191,4 @@ row.querySelector(".total").innerText
 console.log(invoice);
 
 }
-document.getElementById("generateInvoice").onclick = function(){
 
-    alert("Button Working");
-
-};
