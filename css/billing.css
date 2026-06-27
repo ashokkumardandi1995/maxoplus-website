@@ -147,3 +147,34 @@ color:#004aad;
 .invoice-info input{
 margin-bottom:15px;
 }
+#customerList{
+
+background:#fff;
+border:1px solid #ddd;
+border-radius:10px;
+max-height:250px;
+overflow-y:auto;
+margin-bottom:20px;
+
+}
+
+.customerItem{
+
+padding:12px;
+cursor:pointer;
+border-bottom:1px solid #eee;
+transition:.3s;
+
+}
+
+.customerItem:hover{
+
+background:#f4f8ff;
+
+}
+
+.customerItem:last-child{
+
+border-bottom:none;
+
+}
