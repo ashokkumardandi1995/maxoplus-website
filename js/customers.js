@@ -48,7 +48,8 @@ function searchCustomer(){
             document.getElementById("customerGST").value = customer.gst;
             document.getElementById("customerAddress").value = customer.address;
 
-            list.innerHTML = "";
+         list.innerHTML="";
+         list.style.display="none";
 
         };
 
