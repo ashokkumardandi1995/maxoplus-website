@@ -147,29 +147,82 @@ color:#004aad;
 .invoice-info input{
 margin-bottom:15px;
 }
+.search-container{
+position:relative;
+margin-bottom:30px;
+}
+
+#customerSearch{
+padding-right:45px;
+}
+
+#clearCustomer{
+
+position:absolute;
+right:15px;
+top:15px;
+
+cursor:pointer;
+
+font-size:22px;
+
+font-weight:bold;
+
+color:#999;
+
+transition:.3s;
+
+}
+
+#clearCustomer:hover{
+
+color:#ff3b30;
+
+}
+
 #customerList{
 
+position:absolute;
+
+top:100%;
+
+left:0;
+
+width:100%;
+
 background:#fff;
+
 border:1px solid #ddd;
+
 border-radius:10px;
-max-height:250px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+
+z-index:999;
+
+display:none;
+
+max-height:260px;
+
 overflow-y:auto;
-margin-bottom:20px;
 
 }
 
 .customerItem{
 
-padding:12px;
+padding:14px;
+
 cursor:pointer;
+
 border-bottom:1px solid #eee;
+
 transition:.3s;
 
 }
 
 .customerItem:hover{
 
-background:#f4f8ff;
+background:#f3f8ff;
 
 }
 
@@ -178,9 +231,5 @@ background:#f4f8ff;
 border-bottom:none;
 
 }
-#clearCustomer{
 
-margin-top:10px;
-margin-bottom:20px;
 
-}
