@@ -193,3 +193,8 @@ row.querySelector(".total").innerText
 console.log(invoice);
 
 }
+document.getElementById("generateInvoice").onclick = function(){
+
+    alert("Button Working");
+
+};
