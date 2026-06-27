@@ -807,6 +807,7 @@ font-size:32px;
 .about-section{
 grid-template-columns:1fr;
 }
+}
 .billing-section{
 max-width:1200px;
 margin:auto;
