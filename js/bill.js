@@ -126,3 +126,5 @@ document.getElementById("grandTotal")
 .innerText = total.toFixed(2);
 
 }
+document.getElementById("invoiceDate").value =
+new Date().toISOString().split("T")[0];
