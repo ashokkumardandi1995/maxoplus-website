@@ -188,7 +188,7 @@ row.querySelector(".total").innerText
 
 });
 
-console.log(invoice);
+createPDF(invoice);
 
 }
 
