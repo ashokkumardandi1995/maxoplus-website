@@ -829,7 +829,9 @@ width:220px;
 padding:10px;
 }
 .bill-logo{
-width:90px;
+width:90px !important;
+height:auto;
+display:block;
 margin-bottom:10px;
 }
 
