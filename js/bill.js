@@ -293,11 +293,22 @@ const finalY = doc.lastAutoTable.finalY + 12;
 doc.setFontSize(14);
 doc.setFont("helvetica","bold");
 
+doc.setFillColor(0,74,173);
+
+doc.rect(120, finalY-8, 70, 12, "F");
+
+doc.setTextColor(255,255,255);
+
+doc.setFontSize(12);
+
 doc.text(
 "Grand Total : ₹ " + invoice.grandTotal,
-140,
-finalY
+155,
+finalY,
+{align:"center"}
 );
+
+doc.setTextColor(0,0,0);
 doc.save(invoice.invoiceNo + ".pdf");
 
 }
