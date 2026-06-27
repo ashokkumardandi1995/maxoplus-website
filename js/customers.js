@@ -54,6 +54,8 @@ ${customer.gst}
 
 item.onclick = function(){
 
+searchBox.value = customer.name;
+
 document.getElementById("customerName").value =
 customer.name;
 
@@ -66,14 +68,6 @@ customer.gst;
 document.getElementById("customerAddress").value =
 customer.address;
 
-list.innerHTML="";
-
-searchBox.value = customer.name;
-
-}
-
-list.appendChild(item);
-
-});
+list.style.display = "none";
 
 }
