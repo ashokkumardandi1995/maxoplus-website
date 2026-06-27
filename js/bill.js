@@ -43,12 +43,18 @@ ${options}
 </td>
 
 <td>
-<input type="number" class="price" readonly>
+<input type="number" class="boxes" value="0" min="0">
 </td>
 
 <td>
-<input type="number" class="qty" value="1" min="1">
+<input type="number" class="units" value="0" min="0">
 </td>
+
+<td>
+<input type="number" class="price" value="0" min="0">
+</td>
+
+<td class="totalUnits">0</td>
 
 <td class="total">0</td>
 
