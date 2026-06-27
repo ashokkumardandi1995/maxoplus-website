@@ -828,4 +828,37 @@ margin-bottom:25px;
 width:220px;
 padding:10px;
 }
+.bill-logo{
+width:90px;
+margin-bottom:10px;
+}
+
+.company-info h2{
+margin:5px 0;
+color:#004aad;
+}
+
+.invoice-header{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+gap:40px;
+margin-bottom:30px;
+}
+
+.invoice-info{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.invoice-info input{
+width:220px;
+padding:10px;
+}
+
+.company-info p{
+margin:4px 0;
+color:#555;
+}
 }
