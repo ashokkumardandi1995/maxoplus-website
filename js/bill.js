@@ -107,22 +107,6 @@ calculateGrandTotal();
 
 }
 
-
-invoice.products.forEach(item=>{
-
-rows.push([
-
-item.product,
-item.boxes,
-item.units,
-item.price,
-String((Number(item.boxes)*12)+Number(item.units)),
-item.total
-
-]);
-
-});
-
 function calculateGrandTotal(){
 
 let total = 0;
