@@ -82,10 +82,9 @@ body:rows,
 theme:"grid",
 
 headStyles:{
-fillColor:[0,74,173],
-halign:"center"
-},
-
+fillColor:[220,220,220],
+textColor:[0,0,0]
+}
 styles:{
 fontSize:10,
 valign:"middle",
