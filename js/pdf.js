@@ -148,6 +148,40 @@ doc.text("₹ 0.00",185,finalY+22,{align:"right"});
 doc.setFont("helvetica","bold");
 doc.text("₹ " + invoice.grandTotal,185,finalY+29,{align:"right"});
 
+// =========================
+// Signature
+// =========================
+
+doc.line(15, finalY+42, 195, finalY+42);
+
+doc.setFont("helvetica","normal");
+doc.setFontSize(10);
+
+doc.text(
+"Authorized Signature",
+145,
+finalY+52
+);
+
+// =========================
+// Footer
+// =========================
+
+doc.setFontSize(8);
+doc.setTextColor(120);
+
+doc.text(
+"This is a computer-generated invoice.",
+15,
+290
+);
+
+doc.setTextColor(0);
+
+// =========================
+// Save PDF
+// =========================
+
 doc.save(invoice.invoiceNo + ".pdf");
 
 }
