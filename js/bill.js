@@ -208,4 +208,29 @@ document.getElementById("invoiceNo").value =
 getNextInvoiceNumber();
   
 }
+const oldInvoice =
+JSON.parse(localStorage.getItem("currentInvoice"));
 
+if(oldInvoice){
+
+document.getElementById("invoiceNo").value =
+oldInvoice.invoiceNo;
+
+document.getElementById("invoiceDate").value =
+oldInvoice.invoiceDate;
+
+document.getElementById("customerName").value =
+oldInvoice.customerName;
+
+document.getElementById("customerPhone").value =
+oldInvoice.customerPhone;
+
+document.getElementById("customerGST").value =
+oldInvoice.customerGST;
+
+document.getElementById("customerAddress").value =
+oldInvoice.customerAddress;
+
+localStorage.removeItem("currentInvoice");
+
+}
