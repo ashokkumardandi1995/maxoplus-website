@@ -136,6 +136,8 @@ document.getElementById("grandTotal")
 }
 document.getElementById("invoiceDate").value =
 new Date().toISOString().split("T")[0];
+document.getElementById("invoiceNo").value =
+getNextInvoiceNumber();
 document
 .getElementById("generateInvoice")
 .addEventListener("click", generateInvoice);
