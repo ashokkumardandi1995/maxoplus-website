@@ -8,6 +8,7 @@ let next = invoices.length + 1;
 return "INV-" + String(next).padStart(5,"0");
 
 }
+let editingInvoice = false;
 let products = [];
 
 fetch("products.json?v=" + Date.now())
@@ -213,6 +214,9 @@ JSON.parse(localStorage.getItem("currentInvoice"));
 
 if(oldInvoice){
 
+// Invoice is being edited
+editingInvoice = true;
+
 document.getElementById("invoiceNo").value =
 oldInvoice.invoiceNo;
 
@@ -231,7 +235,7 @@ oldInvoice.customerGST;
 document.getElementById("customerAddress").value =
 oldInvoice.customerAddress;
 
-localStorage.removeItem("currentInvoice");
+// Products will be loaded next
 document.getElementById("productBody").innerHTML = "";
 
 oldInvoice.products.forEach(item=>{
@@ -256,4 +260,7 @@ item.price;
 updateRow(row);
 
 });
+
+localStorage.removeItem("currentInvoice");
+
 }
