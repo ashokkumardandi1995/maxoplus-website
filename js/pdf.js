@@ -123,26 +123,30 @@ columnStyles:{
 
 });
 
-const finalY = doc.lastAutoTable.finalY + 12;
+const finalY = doc.lastAutoTable.finalY + 10;
 
-doc.setFillColor(0,74,173);
+// Summary Box
+doc.rect(120, finalY, 70, 32);
 
-doc.roundedRect(105, finalY-6, 85, 12, 2, 2, "F");
+doc.setFont("helvetica","normal");
+doc.setFontSize(10);
 
-doc.setTextColor(255,255,255);
-
-doc.setFontSize(11);
+doc.text("Sub Total",125,finalY+8);
+doc.text("CGST (0%)",125,finalY+15);
+doc.text("SGST (0%)",125,finalY+22);
 
 doc.setFont("helvetica","bold");
+doc.text("Grand Total",125,finalY+29);
 
-doc.text(
-"Grand Total : ₹ " + invoice.grandTotal,
-147,
-finalY + 2,
-{align:"center"}
-);
+// Amounts
+doc.setFont("helvetica","normal");
 
-doc.setTextColor(0,0,0);
+doc.text("₹ " + invoice.grandTotal,185,finalY+8,{align:"right"});
+doc.text("₹ 0.00",185,finalY+15,{align:"right"});
+doc.text("₹ 0.00",185,finalY+22,{align:"right"});
+
+doc.setFont("helvetica","bold");
+doc.text("₹ " + invoice.grandTotal,185,finalY+29,{align:"right"});
 
 doc.save(invoice.invoiceNo + ".pdf");
 
