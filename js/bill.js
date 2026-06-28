@@ -14,8 +14,6 @@ return "INV-" + String(next).padStart(5,"0");
 
 }
 let editingInvoice = false;
-document.getElementById("invoiceNo").value =
-getNextInvoiceNumber();
 let products = [];
 
 fetch("products.json?v=" + Date.now())
@@ -76,6 +74,9 @@ updateRow(row);
 localStorage.removeItem("currentInvoice");
 
 }else{
+
+document.getElementById("invoiceNo").value =
+getNextInvoiceNumber();
 
 document.getElementById("addProduct").click();
 
