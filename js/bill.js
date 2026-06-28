@@ -3,7 +3,12 @@ function getNextInvoiceNumber(){
 let invoices =
 JSON.parse(localStorage.getItem("maxoInvoices")) || [];
 
+console.log("Invoices:", invoices);
+console.log("Count:", invoices.length);
+
 let next = invoices.length + 1;
+
+console.log("Next:", next);
 
 return "INV-" + String(next).padStart(5,"0");
 
