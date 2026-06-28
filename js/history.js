@@ -44,3 +44,18 @@ tbody.appendChild(row);
 }
 
 loadInvoices();
+function deleteInvoice(index){
+
+if(!confirm("Delete this invoice?"))
+return;
+
+invoices.splice(index,1);
+
+localStorage.setItem(
+"maxoInvoices",
+JSON.stringify(invoices)
+);
+
+loadInvoices();
+
+}
