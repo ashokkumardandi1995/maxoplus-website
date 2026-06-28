@@ -231,5 +231,80 @@ background:#f3f8ff;
 border-bottom:none;
 
 }
+/* ===========================
+   Invoice History
+=========================== */
+
+#historyTable{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:20px;
+
+}
+
+#historyTable th{
+
+background:#004aad;
+
+color:#fff;
+
+padding:12px;
+
+border:1px solid #ddd;
+
+text-align:center;
+
+}
+
+#historyTable td{
+
+padding:12px;
+
+border:1px solid #ddd;
+
+text-align:center;
+
+}
+
+#historyTable tr:nth-child(even){
+
+background:#f8f8f8;
+
+}
+
+#historyTable button{
+
+padding:6px 12px;
+
+margin:2px;
+
+border:none;
+
+border-radius:5px;
+
+cursor:pointer;
+
+font-size:14px;
+
+}
+
+#historyTable button:first-child{
+
+background:#004aad;
+
+color:white;
+
+}
+
+#historyTable button:last-child{
+
+background:#ff3b30;
+
+color:white;
+
+}
 
 
