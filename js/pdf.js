@@ -122,7 +122,7 @@ head:[[
 "Qty",
 "Rate",
 "Amount"
-]]
+]],
 
 body:rows,
 
