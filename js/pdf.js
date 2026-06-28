@@ -49,8 +49,8 @@ doc.text("Phone : " + invoice.customerPhone,20,95);
 doc.text("GST : " + invoice.customerGST,20,102);
 
 doc.text("Address : " + invoice.customerAddress,20,109);
-  const rows = [];
-  invoice.products.forEach(item=>{
+const rows = [];
+invoice.products.forEach(item=>{
 
 rows.push([
 
@@ -64,3 +64,66 @@ item.total
 ]);
 
 });
+  doc.autoTable({
+
+startY:120,
+
+head:[[
+"Product",
+"Boxes",
+"Units",
+"Price",
+"Total Units",
+"Total"
+]],
+
+body:rows,
+
+theme:"grid",
+
+headStyles:{
+fillColor:[0,74,173],
+halign:"center"
+},
+
+styles:{
+fontSize:10,
+valign:"middle",
+halign:"center"
+},
+
+columnStyles:{
+0:{cellWidth:60,halign:"left"},
+1:{cellWidth:18},
+2:{cellWidth:18},
+3:{cellWidth:25},
+4:{cellWidth:28},
+5:{cellWidth:32}
+}
+
+});
+
+const finalY = doc.lastAutoTable.finalY + 12;
+
+doc.setFillColor(0,74,173);
+
+doc.roundedRect(105, finalY-6, 85, 12, 2, 2, "F");
+
+doc.setTextColor(255,255,255);
+
+doc.setFontSize(11);
+
+doc.setFont("helvetica","bold");
+
+doc.text(
+"Grand Total : ₹ " + invoice.grandTotal,
+147,
+finalY + 2,
+{align:"center"}
+);
+
+doc.setTextColor(0,0,0);
+
+doc.save(invoice.invoiceNo + ".pdf");
+
+}
