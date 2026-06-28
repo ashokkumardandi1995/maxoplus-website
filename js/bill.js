@@ -17,7 +17,62 @@ fetch("products.json?v=" + Date.now())
 
 products = data;
 
+const oldInvoice =
+JSON.parse(localStorage.getItem("currentInvoice"));
+
+if(oldInvoice){
+
+editingInvoice = true;
+
+document.getElementById("invoiceNo").value =
+oldInvoice.invoiceNo;
+
+document.getElementById("invoiceDate").value =
+oldInvoice.invoiceDate;
+
+document.getElementById("customerName").value =
+oldInvoice.customerName;
+
+document.getElementById("customerPhone").value =
+oldInvoice.customerPhone;
+
+document.getElementById("customerGST").value =
+oldInvoice.customerGST;
+
+document.getElementById("customerAddress").value =
+oldInvoice.customerAddress;
+
+document.getElementById("productBody").innerHTML = "";
+
+oldInvoice.products.forEach(item=>{
+
+addRow();
+
+const row =
+document.querySelector("#productBody tr:last-child");
+
+const index =
+products.findIndex(p=>p.title===item.product);
+
+row.querySelector(".product").value = index;
+
+row.querySelector(".boxes").value = item.boxes;
+
+row.querySelector(".units").value = item.units;
+
+row.querySelector(".price").value = item.price;
+
+updateRow(row);
+
+});
+
+localStorage.removeItem("currentInvoice");
+
+}else{
+
 document.getElementById("addProduct").click();
+
+}
 
 });
 
