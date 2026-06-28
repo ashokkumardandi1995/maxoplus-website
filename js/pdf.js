@@ -100,11 +100,12 @@ invoice.products.forEach(item=>{
 
 rows.push([
 
+index + 1,
 item.product,
 item.boxes,
 item.units,
+(Number(item.boxes)*12)+Number(item.units),
 item.price,
-String((Number(item.boxes)*12)+Number(item.units)),
 item.total
 
 ]);
