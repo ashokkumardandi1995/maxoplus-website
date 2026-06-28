@@ -61,11 +61,6 @@ loadInvoices();
 }
 function viewInvoice(index){
 
-console.log(invoices[index]);
-
-alert(
-"Invoice : " +
-invoices[index].invoiceNo
-);
+openInvoice(index);
 
 }
