@@ -232,5 +232,28 @@ document.getElementById("customerAddress").value =
 oldInvoice.customerAddress;
 
 localStorage.removeItem("currentInvoice");
+document.getElementById("productBody").innerHTML = "";
 
+oldInvoice.products.forEach(item=>{
+
+addRow();
+
+const row =
+document.querySelector("#productBody tr:last-child");
+
+row.querySelector(".product").value =
+products.findIndex(p=>p.title===item.product);
+
+row.querySelector(".boxes").value =
+item.boxes;
+
+row.querySelector(".units").value =
+item.units;
+
+row.querySelector(".price").value =
+item.price;
+
+updateRow(row);
+
+});
 }
