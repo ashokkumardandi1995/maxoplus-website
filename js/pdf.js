@@ -6,19 +6,17 @@ const doc = new jsPDF("p","mm","a4");
 
 doc.setFont("helvetica","bold");
 
-doc.setFontSize(22);
+doc.setFont("helvetica","bold");
+doc.setFontSize(20);
+doc.text("MAXO PLUS",20,20);
 
-doc.text("TAX INVOICE",105,20,{align:"center"});
-
-doc.setFontSize(18);
-
-doc.setTextColor(0,0,0);
-
-doc.text("MAXO PLUS",20,35);
-
+doc.setFont("helvetica","normal");
 doc.setFontSize(10);
+doc.text("Premium Cleaning Solutions For Every Home",20,26);
 
-doc.setTextColor(0);
+doc.setFont("helvetica","bold");
+doc.setFontSize(18);
+doc.text("TAX INVOICE",190,20,{align:"right"});
 
 doc.text("Premium Cleaning Solutions For Every Home",20,42);
 
