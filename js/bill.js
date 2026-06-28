@@ -1,3 +1,13 @@
+function getNextInvoiceNumber(){
+
+let invoices =
+JSON.parse(localStorage.getItem("maxoInvoices")) || [];
+
+let next = invoices.length + 1;
+
+return "INV-" + String(next).padStart(5,"0");
+
+}
 let products = [];
 
 fetch("products.json?v=" + Date.now())
