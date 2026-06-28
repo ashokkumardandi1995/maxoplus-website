@@ -26,8 +26,6 @@ align:"center"
 }
 );
 
-doc.restoreGraphicsState();
-
 doc.setTextColor(0);
 // =========================
 // MAXO PLUS HEADER
