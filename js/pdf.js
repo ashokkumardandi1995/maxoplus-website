@@ -96,7 +96,7 @@ invoice.customerAddress || "-",
 
 doc.text(address,42,89);
 const rows = [];
-invoice.products.forEach(item=>{
+invoice.products.forEach((item,index)=>{
 
 rows.push([
 
