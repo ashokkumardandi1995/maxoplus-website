@@ -203,6 +203,9 @@ row.querySelector(".total").innerText
 saveInvoice(invoice);
 
 createPDF(invoice);
+
+document.getElementById("invoiceNo").value =
+getNextInvoiceNumber();
   
 }
 
