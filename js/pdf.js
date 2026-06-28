@@ -115,13 +115,14 @@ item.total
 startY:105,
 
 head:[[
+"Sl",
 "Product",
 "Boxes",
 "Units",
-"Price",
-"Total Units",
-"Total"
-]],
+"Qty",
+"Rate",
+"Amount"
+]]
 
 body:rows,
 
