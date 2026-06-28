@@ -3,7 +3,32 @@ async function createPDF(invoice){
 const { jsPDF } = window.jspdf;
 
 const doc = new jsPDF("p","mm","a4");
+// =========================
+// WATERMARK
+// =========================
 
+doc.saveGraphicsState();
+
+doc.setGState(new doc.GState({opacity:0.06}));
+
+doc.setFont("helvetica","bold");
+doc.setFontSize(60);
+
+doc.setTextColor(180);
+
+doc.text(
+"MAXO PLUS",
+105,
+170,
+{
+angle:45,
+align:"center"
+}
+);
+
+doc.restoreGraphicsState();
+
+doc.setTextColor(0);
 // =========================
 // MAXO PLUS HEADER
 // =========================
