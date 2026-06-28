@@ -256,7 +256,32 @@ row.querySelector(".total").innerText
 
 });
 
+if(editingInvoice){
+
+let invoices =
+JSON.parse(localStorage.getItem("maxoInvoices")) || [];
+
+const index =
+invoices.findIndex(i=>i.invoiceNo===invoice.invoiceNo);
+
+if(index!=-1){
+
+invoices[index]=invoice;
+
+localStorage.setItem(
+"maxoInvoices",
+JSON.stringify(invoices)
+);
+
+}
+
+editingInvoice = false;
+
+}else{
+
 saveInvoice(invoice);
+
+}
 
 createPDF(invoice);
 
