@@ -14,6 +14,8 @@ return "INV-" + String(next).padStart(5,"0");
 
 }
 let editingInvoice = false;
+document.getElementById("invoiceNo").value =
+getNextInvoiceNumber();
 let products = [];
 
 fetch("products.json?v=" + Date.now())
@@ -204,7 +206,8 @@ document
 .addEventListener("click", generateInvoice);
 
 function generateInvoice(){
-
+console.log("Editing:", editingInvoice);
+console.log("Invoice No:", document.getElementById("invoiceNo").value);
 const invoice = {
 
 invoiceNo:
