@@ -12,13 +12,13 @@ doc.text("TAX INVOICE",105,20,{align:"center"});
 
 doc.setFontSize(18);
 
-doc.setTextColor(0,74,173);
+doc.setTextColor(0,0,0);
 
 doc.text("MAXO PLUS",20,35);
 
 doc.setFontSize(10);
 
-doc.setTextColor(80);
+doc.setTextColor(0);
 
 doc.text("Premium Cleaning Solutions For Every Home",20,42);
 
