@@ -158,9 +158,15 @@ doc.setFont("helvetica","normal");
 doc.setFontSize(10);
 
 doc.text(
-"Authorized Signature",
+"For MAXO PLUS",
 145,
-finalY+52
+finalY+48
+);
+
+doc.text(
+"Authorized Signatory",
+145,
+finalY+55
 );
 
 // =========================
