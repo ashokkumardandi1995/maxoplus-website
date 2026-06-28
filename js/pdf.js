@@ -25,6 +25,7 @@ angle:45,
 align:"center"
 }
 );
+doc.restoreGraphicsState();
 
 doc.setTextColor(0);
 // =========================
