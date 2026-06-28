@@ -50,3 +50,17 @@ doc.text("GST : " + invoice.customerGST,20,102);
 
 doc.text("Address : " + invoice.customerAddress,20,109);
   const rows = [];
+  invoice.products.forEach(item=>{
+
+rows.push([
+
+item.product,
+item.boxes,
+item.units,
+item.price,
+String((Number(item.boxes)*12)+Number(item.units)),
+item.total
+
+]);
+
+});
