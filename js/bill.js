@@ -296,6 +296,17 @@ createPDF(invoice);
 
 document.getElementById("invoiceNo").value =
 getNextInvoiceNumber();
+
+document.getElementById("customerName").value = "";
+document.getElementById("customerPhone").value = "";
+document.getElementById("customerGST").value = "";
+document.getElementById("customerAddress").value = "";
+
+document.getElementById("productBody").innerHTML = "";
+
+document.getElementById("addProduct").click();
+
+document.getElementById("grandTotal").innerText = "0.00";
   
 }
 
