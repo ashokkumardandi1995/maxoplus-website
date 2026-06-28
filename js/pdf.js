@@ -4,49 +4,72 @@ const { jsPDF } = window.jspdf;
 
 const doc = new jsPDF("p","mm","a4");
 
-doc.setFont("helvetica","bold");
-
-doc.setFont("helvetica","bold");
-doc.setFontSize(20);
-doc.text("MAXO PLUS",20,20);
-
-doc.setFont("helvetica","normal");
-doc.setFontSize(10);
-doc.text("Premium Cleaning Solutions For Every Home",20,26);
+// =========================
+// MAXO PLUS HEADER
+// =========================
 
 doc.setFont("helvetica","bold");
 doc.setFontSize(18);
-doc.text("TAX INVOICE",190,20,{align:"right"});
+doc.text("MAXO PLUS",15,15);
 
-doc.text("Premium Cleaning Solutions For Every Home",20,42);
+doc.setFont("helvetica","normal");
+doc.setFontSize(9);
+doc.text("Premium Cleaning Solutions For Every Home",15,20);
+doc.text("Visakhapatnam, Andhra Pradesh",15,25);
+doc.text("Phone : +91 9493945946",15,30);
+doc.text("Email : maxopluscare@gmail.com",15,35);
 
-doc.text("Visakhapatnam, Andhra Pradesh",20,48);
+doc.setFont("helvetica","bold");
+doc.setFontSize(20);
+doc.text("TAX INVOICE",195,15,{align:"right"});
 
-doc.text("Phone : +91 9493945946",20,54);
+// Invoice Information Box
+doc.rect(140,20,55,28);
 
-doc.text("Email : maxopluscare@gmail.com",20,60);
+doc.setFontSize(9);
+doc.setFont("helvetica","bold");
 
-doc.setTextColor(0);
+doc.text("Invoice No",145,28);
+doc.text(invoice.invoiceNo,145,34);
 
-doc.text("Invoice No : " + invoice.invoiceNo,140,35);
+doc.text("Date",145,42);
+doc.text(invoice.invoiceDate,145,48);
 
-doc.text("Date : " + invoice.invoiceDate,140,42);
+// Divider
+doc.setLineWidth(0.5);
+doc.line(15,55,195,55);
 
-doc.line(20,68,190,68);
+// =========================
+// BILL TO
+// =========================
 
-doc.setFontSize(14);
+doc.rect(15,60,180,38);
 
-doc.text("Customer Details",20,78);
-
+doc.setFont("helvetica","bold");
 doc.setFontSize(11);
+doc.text("BILL TO",18,67);
 
-doc.text("Name : " + invoice.customerName,20,88);
+doc.setFont("helvetica","normal");
+doc.setFontSize(10);
 
-doc.text("Phone : " + invoice.customerPhone,20,95);
+doc.text("Customer :",18,75);
+doc.text(invoice.customerName || "-",42,75);
 
-doc.text("GST : " + invoice.customerGST,20,102);
+doc.text("Phone :",18,82);
+doc.text(invoice.customerPhone || "-",42,82);
 
-doc.text("Address : " + invoice.customerAddress,20,109);
+doc.text("GSTIN :",110,82);
+doc.text(invoice.customerGST || "-",128,82);
+
+doc.text("Address :",18,89);
+
+const address =
+doc.splitTextToSize(
+invoice.customerAddress || "-",
+140
+);
+
+doc.text(address,42,89);
 const rows = [];
 invoice.products.forEach(item=>{
 
@@ -64,7 +87,7 @@ item.total
 });
   doc.autoTable({
 
-startY:120,
+startY:105,
 
 head:[[
 "Product",
