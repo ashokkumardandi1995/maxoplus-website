@@ -139,12 +139,13 @@ halign:"center"
 },
 
 columnStyles:{
-0:{cellWidth:60,halign:"left"},
-1:{cellWidth:18},
-2:{cellWidth:18},
-3:{cellWidth:25},
-4:{cellWidth:28},
-5:{cellWidth:32}
+0:{cellWidth:10},      // Sl
+1:{cellWidth:60},      // Product
+2:{cellWidth:16},      // Boxes
+3:{cellWidth:16},      // Units
+4:{cellWidth:22},      // Qty
+5:{cellWidth:18},      // Rate
+6:{cellWidth:38,halign:"right"} // Amount
 }
 
 });
