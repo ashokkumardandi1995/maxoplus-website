@@ -41,6 +41,31 @@ oldInvoice.customerName;
 document.getElementById("customerSearch").value =
 oldInvoice.customerName;
 
+const customer =
+customers.find(c => c.name === oldInvoice.customerName);
+
+if(customer){
+
+document.getElementById("customerSearch").value =
+customer.name;
+
+document.getElementById("customerName").value =
+customer.name;
+
+document.getElementById("customerPhone").value =
+customer.phone;
+
+document.getElementById("customerGST").value =
+customer.gst;
+
+document.getElementById("customerAddress").value =
+customer.address;
+
+}else{
+
+document.getElementById("customerName").value =
+oldInvoice.customerName;
+
 document.getElementById("customerPhone").value =
 oldInvoice.customerPhone;
 
@@ -49,6 +74,8 @@ oldInvoice.customerGST;
 
 document.getElementById("customerAddress").value =
 oldInvoice.customerAddress;
+
+}
 
 document.getElementById("productBody").innerHTML = "";
 
