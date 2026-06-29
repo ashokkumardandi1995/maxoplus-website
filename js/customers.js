@@ -1,10 +1,26 @@
 let customers = [];
 
+// Load customers from localStorage
+customers =
+JSON.parse(localStorage.getItem("maxoCustomers")) || [];
+
+// If empty, load the default JSON once
+if(customers.length === 0){
+
 fetch("data/customers.json?v=" + Date.now())
 .then(res => res.json())
 .then(data => {
-    customers = data;
+
+customers = data;
+
+localStorage.setItem(
+"maxoCustomers",
+JSON.stringify(customers)
+);
+
 });
+
+}
 
 const searchBox = document.getElementById("customerSearch");
 const list = document.getElementById("customerList");
