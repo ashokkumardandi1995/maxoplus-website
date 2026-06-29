@@ -319,6 +319,7 @@ editingInvoice = false;
 }else{
 
 saveInvoice(invoice);
+saveCustomer(invoice);
 
 }
 
