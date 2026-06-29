@@ -38,6 +38,9 @@ oldInvoice.invoiceDate;
 document.getElementById("customerName").value =
 oldInvoice.customerName;
 
+document.getElementById("customerSearch").value =
+oldInvoice.customerName;
+
 document.getElementById("customerPhone").value =
 oldInvoice.customerPhone;
 
