@@ -47,3 +47,18 @@ tbody.appendChild(row);
 }
 
 loadCustomers();
+function deleteCustomer(index){
+
+if(!confirm("Delete Customer?"))
+return;
+
+customers.splice(index,1);
+
+localStorage.setItem(
+"maxoCustomers",
+JSON.stringify(customers)
+);
+
+loadCustomers();
+
+}
