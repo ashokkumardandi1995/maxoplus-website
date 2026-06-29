@@ -47,7 +47,7 @@ tbody.appendChild(row);
 }
 
 loadCustomers();
-}
+
 function editCustomer(index){
 
     alert(customers[index].name);
