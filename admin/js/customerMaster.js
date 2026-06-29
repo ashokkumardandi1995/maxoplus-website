@@ -1,4 +1,3 @@
-console.log("Searching...");
 let customers =
 JSON.parse(localStorage.getItem("maxoCustomers")) || [];
 
