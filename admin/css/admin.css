@@ -63,3 +63,28 @@ button:last-child{
     background:#dc3545;
     color:white;
 }
+.page-title{
+
+max-width:900px;
+
+margin:30px auto 20px;
+
+}
+
+.page-title h1{
+
+font-size:42px;
+
+color:#004aad;
+
+margin:0;
+
+}
+
+.page-title p{
+
+margin-top:8px;
+
+color:#666;
+
+}

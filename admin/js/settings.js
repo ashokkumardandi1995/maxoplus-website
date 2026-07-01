@@ -1,6 +1,6 @@
 let settings = {};
 
-fetch("data/settings.json?v=" + Date.now())
+fetch("../data/settings.json?v=" + Date.now())
 .then(res => res.json())
 .then(data=>{
 

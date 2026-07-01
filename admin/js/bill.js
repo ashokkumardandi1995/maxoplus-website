@@ -16,7 +16,7 @@ return "INV-" + String(next).padStart(5,"0");
 let editingInvoice = false;
 let products = [];
 
-fetch("products.json?v=" + Date.now())
+fetch("../products.json?v=" + Date.now())
 .then(res => res.json())
 .then(data => {
 

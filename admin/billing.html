@@ -8,34 +8,18 @@
 
 <title>Maxo Plus Billing</title>
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/billing.css">
+<link rel="stylesheet" href="../css/style.css"> 
+<link rel="stylesheet" href="../css/billing.css">
+<link rel="stylesheet" href="admin.css?v=2">
 
 </head>
 
 <body>
-
-<nav>
-<div class="logo">
-<img src="images/maxoplus.png" alt="Maxo Plus">
+<div id="adminMenu"></div>
+<div class="page-title">
+    <h1>Invoice Generator</h1>
+    <p>Create professional Maxo Plus invoices.</p>
 </div>
-
-<div class="menu-toggle">☰</div>
-
-<ul class="nav-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="products.html">Products</a></li>
-<li><a href="videos.html">Videos</a></li>
-<li><a href="bill.html">Billing</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-
-</nav>
-
-<section class="page-banner">
-<h1>Invoice Generator</h1>
-<p>Create professional Maxo Plus invoices.</p>
-</section>
 
 <section class="contact-form-section">
 
@@ -45,7 +29,7 @@
 
 <div class="company-info">
 <h3>Seller Details</h3>
-<img src="images/maxoplus.png" class="bill-logo" alt="Maxo Plus">
+<img src="../images/maxoplus.png" class="bill-logo" alt="Maxo Plus">
 
 <h2>MAXO PLUS</h2>
 
@@ -165,24 +149,7 @@ Generate PDF
 
 </footer>
 
-<script>
 
-const menuToggle =
-document.querySelector(".menu-toggle");
-
-const navLinks =
-document.querySelector(".nav-links");
-
-menuToggle.onclick = () => {
-
-navLinks.classList.toggle("active");
-
-menuToggle.innerHTML =
-navLinks.classList.contains("active") ? "✕" : "☰";
-
-};
-
-</script>
 <script src="js/customerStorage.js"></script>
 <script src="js/customers.js"></script>
 <script src="js/settings.js"></script>
@@ -191,5 +158,7 @@ navLinks.classList.contains("active") ? "✕" : "☰";
 <script src="js/storage.js"></script>
 <script src="js/pdf.js"></script>
 <script src="js/bill.js"></script>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script src="js/adminMenu.js"></script>
 </body>
 </html>

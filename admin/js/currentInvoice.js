@@ -8,6 +8,6 @@ localStorage.setItem(
 JSON.stringify(invoices[index])
 );
 
-window.location.href="bill.html";
+window.location.href="billing.html";
 
 }

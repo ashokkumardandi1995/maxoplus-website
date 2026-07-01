@@ -7,7 +7,7 @@ JSON.parse(localStorage.getItem("maxoCustomers")) || [];
 // If empty, load the default JSON once
 if(customers.length === 0){
 
-fetch("data/customers.json?v=" + Date.now())
+fetch("admin/data/customers.json?v=" + Date.now())
 .then(res => res.json())
 .then(data => {
 
